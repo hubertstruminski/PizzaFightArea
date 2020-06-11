@@ -9,6 +9,10 @@ namespace PizzaFightArea.Service
 {
     public class PizzaInitializator
     {
+        /// <summary>
+        /// Field in <c>PizzaInitializator</c> class which stores <c>Pizza</c>
+        /// class data
+        /// </summary>
         public List<Pizza> pizzas;
 
         public PizzaInitializator()
