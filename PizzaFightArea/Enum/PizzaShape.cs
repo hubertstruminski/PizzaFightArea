@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PizzaFightArea.Enum
 {
-    enum Shape
+    public enum PizzaShape
     {
         CIRCLE, SQUARE, TRIANGLE, RECTANGLE
     }
