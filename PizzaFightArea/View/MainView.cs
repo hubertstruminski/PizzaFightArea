@@ -14,6 +14,13 @@ namespace PizzaFightArea.View
             Console.WriteLine("2. New game - 1 vs 1");
             Console.WriteLine("3. Statistics");
             Console.WriteLine("4. Exit");
+            Console.WriteLine("----------------");
+            Console.Write("Option: ");
+        }
+
+        public void showOptionChooseError()
+        {
+            Console.WriteLine("It's not a number.");
         }
     }
 }

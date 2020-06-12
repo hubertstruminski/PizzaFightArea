@@ -10,14 +10,14 @@ namespace PizzaFightArea
     {
         static void manageMenu()
         {
-            MainView mainView = new MainView();
-            mainView.showMainMenu();
+            PizzaResolver resolver = new PizzaResolver();
+            resolver.chooseOptionInMainMenu();
         }
         static void Main(string[] args)
         {
             manageMenu();
-            PizzaInitializator initializator = new PizzaInitializator();
-            List<Pizza> pizzas = initializator.pizzas;
+            //PizzaInitializator initializator = new PizzaInitializator();
+            //List<Pizza> pizzas = initializator.pizzas;
 
             //Random random = new Random();
             //int randomIndex = random.Next(0, pizzas.Count);
@@ -26,11 +26,11 @@ namespace PizzaFightArea
             //Console.WriteLine(pizzas[15].ToString("Computer"));
 
             int count = 1;
-            foreach(Pizza pizza in pizzas)
-            {
-                Console.WriteLine(pizza.ToString("Hubert " + count));
-                count++;
-            }
+            //foreach(Pizza pizza in pizzas)
+            //{
+            //    Console.WriteLine(pizza.ToString("Hubert " + count));
+            //    count++;
+            //}
 
         }
     }
