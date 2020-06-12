@@ -184,7 +184,7 @@ namespace PizzaFightArea.Service
             }
             else
             {
-                mainView.showNoAvailableStatistics();
+                mainView.ShowNoAvailableStatistics();
             }
             
         }
