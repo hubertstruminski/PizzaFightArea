@@ -8,14 +8,14 @@ namespace PizzaFightArea
 {
     class Program
     {
-        static void manageMenu()
+        static void ManageMenu()
         {
             PizzaResolver resolver = new PizzaResolver();
-            resolver.chooseOptionInMainMenu();
+            resolver.ChooseOptionInMainMenu();
         }
         static void Main(string[] args)
         {
-            manageMenu();
+            ManageMenu();
             //PizzaInitializator initializator = new PizzaInitializator();
             //List<Pizza> pizzas = initializator.pizzas;
 

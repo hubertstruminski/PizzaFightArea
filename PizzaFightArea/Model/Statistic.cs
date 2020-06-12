@@ -7,13 +7,13 @@ namespace PizzaFightArea.Model
 {
     public class Statistic
     {
-        private string nick { get; set; }
-        private int score { get; set; }
+        private string Nick { get; set; }
+        private double Score { get; set; }
 
         public Statistic(string nick, int score)
         {
-            this.nick = nick;
-            this.score = score;
+            this.Nick = nick;
+            this.Score = score;
         }
     }
 }

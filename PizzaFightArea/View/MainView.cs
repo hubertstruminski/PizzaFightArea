@@ -6,7 +6,7 @@ namespace PizzaFightArea.View
 {
     public class MainView
     {
-        public void showMainMenu()
+        public void ShowMainMenu()
         {
             Console.WriteLine("Pizza Fight Area");
             Console.WriteLine("----------------");
@@ -18,9 +18,14 @@ namespace PizzaFightArea.View
             Console.Write("Option: ");
         }
 
-        public void showOptionChooseError()
+        public void ShowOptionChooseError()
         {
             Console.WriteLine("It's not a number.");
+        }
+
+        public void ShowInputNickCommand()
+        {
+            Console.Write("\nInput your Name: ");
         }
     }
 }

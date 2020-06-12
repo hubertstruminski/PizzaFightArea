@@ -10,39 +10,39 @@ namespace PizzaFightArea.Model
     /// </summary>
     public class Pizza
     {
-        private PizzaName name { get; set; }
-        private int hunger { get; set; }
-        private int sharpness { get; set; }
-        private int flavor { get; set; }
-        private PizzaShape shape { get; set; }
-        private int smell { get; set; }
-        private double score { get; set; }
+        private PizzaName Name { get; set; }
+        private int Hunger { get; set; }
+        private int Sharpness { get; set; }
+        private int Flavor { get; set; }
+        private PizzaShape Shape { get; set; }
+        private int Smell { get; set; }
+        public double Score { get; set; }
 
         /// <summary>
         /// Argument constructor for <c>Pizza</c> class
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="hunger"></param>
-        /// <param name="sharpness"></param>
-        /// <param name="flavor"></param>
-        /// <param name="shape"></param>
-        /// <param name="smell"></param>
+        /// <param Name="name"></param>
+        /// <param Name="Hunger"></param>
+        /// <param Name="Sharpness"></param>
+        /// <param Name="Flavor"></param>
+        /// <param Name="Shape"></param>
+        /// <param Name="Smell"></param>
         public Pizza(PizzaName name, int hunger, int sharpness, int flavor, PizzaShape shape, int smell)
         {
-            this.name = name;
-            this.hunger = hunger;
-            this.sharpness = sharpness;
-            this.flavor = flavor;
-            this.shape = shape;
-            this.smell = smell;
-            this.score = Math.Round(hunger * 0.87 + sharpness * 0.92 + flavor * 0.23 + computeShapeValue(shape) + smell * 0.43, 2);
+            this.Name = name;
+            this.Hunger = hunger;
+            this.Sharpness = sharpness;
+            this.Flavor = flavor;
+            this.Shape = shape;
+            this.Smell = smell;
+            this.Score = Math.Round(hunger * 0.87 + sharpness * 0.92 + flavor * 0.23 + ComputeShapeScore(shape) + smell * 0.43, 2);
         }
 
         /// <summary>
         /// Method <c>ToString</c> generates view of pizza table.
-        /// Method takes parameter <c>yournick</c> type of string which is current name of player
+        /// Method takes parameter <c>yournick</c> type of string which is current Name of player
         /// </summary>
-        /// <param name="yourNick"></param>
+        /// <param Name="yourNick"></param>
         /// <returns></returns>
         public string ToString(string yourNick)
         {
@@ -77,22 +77,22 @@ namespace PizzaFightArea.Model
 
             builder.Append("|").Append(new string(' ', entireLength - 2)).Append("|").Append("\n");
 
-            processFieldsToTable(entireLength, "Pizza", name.ToString(), builder);
+            ProcessFieldsToTable(entireLength, "Pizza", Name.ToString(), builder);
 
             builder.Append("|").Append(new string(' ', entireLength - 2)).Append("|").Append("\n");
 
-            processFieldsToTable(entireLength, "Hunger", hunger.ToString(), builder);
-            processFieldsToTable(entireLength, "Sharpness", sharpness.ToString(), builder);
-            processFieldsToTable(entireLength, "Flavor", flavor.ToString(), builder);
-            processFieldsToTable(entireLength, "Smell", smell.ToString(), builder);
+            ProcessFieldsToTable(entireLength, "Hunger", Hunger.ToString(), builder);
+            ProcessFieldsToTable(entireLength, "Sharpness", Sharpness.ToString(), builder);
+            ProcessFieldsToTable(entireLength, "Flavor", Flavor.ToString(), builder);
+            ProcessFieldsToTable(entireLength, "Smell", Smell.ToString(), builder);
 
             builder.Append("|").Append(new string(' ', entireLength - 2)).Append("|").Append("\n");
 
-            processFieldsToTable(entireLength, "Shape", shape.ToString(), builder);
+            ProcessFieldsToTable(entireLength, "Shape", Shape.ToString(), builder);
 
             builder.Append("|").Append(new string(' ', entireLength - 2)).Append("|").Append("\n");
 
-            processFieldsToTable(entireLength, "Score", score.ToString(), builder);
+            ProcessFieldsToTable(entireLength, "Score", Score.ToString(), builder);
 
             builder.Append("|").Append(new string(' ', entireLength - 2)).Append("|").Append("\n");
             builder.Append(new string('-', entireLength)).Append("\n");
@@ -101,14 +101,14 @@ namespace PizzaFightArea.Model
         }
 
         /// <summary>
-        /// Method <c>processFieldsToTable</c> generate single line to 
+        /// Method <c>ProcessFieldsToTable</c> generate single line to 
         /// view of pizza table for single property of pizza model
         /// </summary>
-        /// <param name="entireLength"></param>
-        /// <param name="fieldName"></param>
-        /// <param name="field"></param>
-        /// <param name="builder"></param>
-        public void processFieldsToTable(int entireLength, string fieldName, string field, StringBuilder builder)
+        /// <param Name="entireLength"></param>
+        /// <param Name="fieldName"></param>
+        /// <param Name="field"></param>
+        /// <param Name="builder"></param>
+        public void ProcessFieldsToTable(int entireLength, string fieldName, string field, StringBuilder builder)
         {
             string fieldString = fieldName + ": " + field;
             int fieldStringLength = fieldString.Length;
@@ -138,7 +138,7 @@ namespace PizzaFightArea.Model
                 .Append("\n");
         }
 
-        public double computeShapeValue(PizzaShape pizzaShape)
+        public double ComputeShapeScore(PizzaShape pizzaShape)
         {
             int result;
             if(pizzaShape == PizzaShape.CIRCLE)
