@@ -1,6 +1,5 @@
 ﻿using PizzaFightArea.Enum;
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace PizzaFightArea.Model
