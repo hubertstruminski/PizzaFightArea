@@ -11,12 +11,17 @@ namespace PizzaFightArea
         static void ManageMenu()
         {
             PizzaResolver resolver = new PizzaResolver();
-            int option = resolver.ChooseOptionInMainMenu();
-            resolver.SwitchToDestinationOption(option);
+            while(true)
+            {
+                int option = resolver.ChooseOptionInMainMenu();
+                resolver.SwitchToDestinationOption(option);
+            }
         }
+
         static void Main(string[] args)
         {
             ManageMenu();
+            
             //PizzaInitializator initializator = new PizzaInitializator();
             //List<Pizza> pizzas = initializator.pizzas;
 

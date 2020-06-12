@@ -2,6 +2,7 @@
 using PizzaFightArea.View;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 
@@ -56,14 +57,12 @@ namespace PizzaFightArea.Service
             {
                 case 1:
                     Manage1VsComputer();
-                    ChooseOptionInMainMenu();
                     break;
                 case 2:
                     Manage1Vs1();
-                    ChooseOptionInMainMenu();
                     break;
                 case 3:
-                    ManageStatistics(new List<Statistic>());
+                    ManageStatistics(statistics);
                     break;
                 case 4:
                     System.Environment.Exit(0);
@@ -75,10 +74,19 @@ namespace PizzaFightArea.Service
 
         public void ManageStatistics(List<Statistic> statistics)
         {
-            foreach(Statistic statistic in statistics)
+            if(statistics.Count != 0)
             {
-                Console.WriteLine(statistic.ToString());
+                List<Statistic> lists = statistics.OrderByDescending(i => i.Score).ToList();
+                foreach (Statistic statistic in lists)
+                {
+                    Console.WriteLine(statistic.ToString());
+                }
             }
+            else
+            {
+                mainView.showNoAvailableStatistics();
+            }
+            
         }
         
         public void Manage1VsComputer()
@@ -98,8 +106,8 @@ namespace PizzaFightArea.Service
             mainView.ShowScores(name, playerWins, playerLosts,
                 playerDeadHeats, "Computer", secondPlayerWins, secondPlayerLosts);
 
-            statistics.Add(myStatistics);
-            statistics.Add(computerStatistics);
+            checkThatPlayerExistInStatistics(myStatistics);
+            checkThatPlayerExistInStatistics(computerStatistics);
         }
 
         public void Manage1Vs1()
@@ -122,8 +130,8 @@ namespace PizzaFightArea.Service
             mainView.ShowScores(firstName, playerWins, playerLosts,
                 playerDeadHeats, secondName, secondPlayerWins, secondPlayerLosts);
 
-            statistics.Add(firstPlayerStatistics);
-            statistics.Add(secondPlayerStatistics);
+            checkThatPlayerExistInStatistics(firstPlayerStatistics);
+            checkThatPlayerExistInStatistics(secondPlayerStatistics);
         }
 
         public void chooseWinner(string name, string secondNamePlayer)
@@ -181,6 +189,20 @@ namespace PizzaFightArea.Service
             Console.ReadKey();
             Console.Clear();
         }
+
+        public void checkThatPlayerExistInStatistics(Statistic statistic)
+        {
+            int index = statistics.FindIndex(s => s.Nick.Equals(statistic.Nick));
+            if (index == -1)
+            {
+                statistics.Add(statistic);
+            }
+            else
+            {
+                Statistic returnedStatistic = statistics[index];
+                returnedStatistic.Score += statistic.Score;
+            }
+        } 
 
         public void RestartScores()
         {
