@@ -27,5 +27,39 @@ namespace PizzaFightArea.View
         {
             Console.Write("\nInput your Name: ");
         }
+
+        public void ShowInputNikCommandForSecondPlayer()
+        {
+            Console.Write("\nInput name for second player: ");
+        }
+
+        public void ShowWinner(string name)
+        {
+            Console.WriteLine("The winner is: " + name);
+        }
+
+        public void ShowDeadHeat()
+        {
+            Console.WriteLine("Dead-Heat.");
+        }
+
+        public void ShowReadKeyForContinueGame()
+        {
+            Console.Write("Click any key to continue game...");
+        }
+
+        public void ShowScores(string name, int playerWins, int playerLosts, int playerDeadHeats,
+            string secondPlayerName, int player2Wins, int player2Losts)
+        {
+            Console.WriteLine("Scores for " + name);
+            Console.WriteLine("Wins: " + playerWins);
+            Console.WriteLine("Losts: " + playerLosts + "\n");
+
+            Console.WriteLine("Scores for " + secondPlayerName);
+            Console.WriteLine("Wins: " + player2Wins);
+            Console.WriteLine("Losts: " + player2Losts);
+
+            Console.WriteLine("Dead Heats: " + playerDeadHeats);
+        }
     }
 }

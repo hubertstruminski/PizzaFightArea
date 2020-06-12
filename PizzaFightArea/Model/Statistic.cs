@@ -8,7 +8,7 @@ namespace PizzaFightArea.Model
     public class Statistic
     {
         private string Nick { get; set; }
-        private double Score { get; set; }
+        public double Score { get; set; }
 
         public Statistic(string nick, int score)
         {
