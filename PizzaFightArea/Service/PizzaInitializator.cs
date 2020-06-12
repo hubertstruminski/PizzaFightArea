@@ -7,6 +7,9 @@ using System.Text;
 
 namespace PizzaFightArea.Service
 {
+    /// <summary>
+    /// <c>PizzaInitializator</c> class which stores <c>pizzas</c> field
+    /// </summary>
     public class PizzaInitializator
     {
         /// <summary>
@@ -15,6 +18,9 @@ namespace PizzaFightArea.Service
         /// </summary>
         public List<Pizza> pizzas;
 
+        /// <summary>
+        /// <c>PizzaInitializator</c> constructor which initialize <c>pizzas</c> field with Pizza data
+        /// </summary>
         public PizzaInitializator()
         {
             pizzas = new List<Pizza>() 
@@ -50,8 +56,7 @@ namespace PizzaFightArea.Service
                 new Pizza(PizzaName.SPARARE, 61, 58, 77, PizzaShape.CIRCLE, 86),
                 new Pizza(PizzaName.WIEJSKA, 69, 64, 97, PizzaShape.TRIANGLE, 83),
                 new Pizza(PizzaName.CAMPIONE, 65, 61, 87, PizzaShape.RECTANGLE, 62),
-                new Pizza(PizzaName.CAPRICIOSA, 63, 53, 47, PizzaShape.CIRCLE, 59),
-
+                new Pizza(PizzaName.CAPRICIOSA, 63, 53, 47, PizzaShape.CIRCLE, 59)
             };
         }
     }

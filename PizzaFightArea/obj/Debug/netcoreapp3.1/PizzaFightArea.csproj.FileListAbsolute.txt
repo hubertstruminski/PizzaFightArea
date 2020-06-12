@@ -1,0 +1,13 @@
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\bin\Debug\netcoreapp3.1\PizzaFightArea.exe
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\bin\Debug\netcoreapp3.1\PizzaFightArea.deps.json
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\bin\Debug\netcoreapp3.1\PizzaFightArea.runtimeconfig.json
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\bin\Debug\netcoreapp3.1\PizzaFightArea.runtimeconfig.dev.json
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\bin\Debug\netcoreapp3.1\PizzaFightArea.dll
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\bin\Debug\netcoreapp3.1\PizzaFightArea.pdb
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\obj\Debug\netcoreapp3.1\PizzaFightArea.csprojAssemblyReference.cache
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\obj\Debug\netcoreapp3.1\PizzaFightArea.AssemblyInfoInputs.cache
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\obj\Debug\netcoreapp3.1\PizzaFightArea.AssemblyInfo.cs
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\obj\Debug\netcoreapp3.1\PizzaFightArea.csproj.CoreCompileInputs.cache
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\obj\Debug\netcoreapp3.1\PizzaFightArea.dll
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\obj\Debug\netcoreapp3.1\PizzaFightArea.pdb
+C:\Users\huber\source\repos\PizzaFightArea\PizzaFightArea\obj\Debug\netcoreapp3.1\PizzaFightArea.genruntimeconfig.cache
