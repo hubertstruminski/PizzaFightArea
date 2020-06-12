@@ -5,27 +5,94 @@ using System.Text;
 namespace PizzaFightArea.Model
 {
     /// <summary>
-    /// <c>Pizza</c> class which models Pizza object
+    /// <c>Pizza</c> class
+    /// <remarks>
+    ///     The class which models Pizza object
+    /// </remarks>
     /// </summary>
     public class Pizza
     {
+        /// <summary>
+        /// Property <c>Name</c>
+        /// <remarks>
+        ///     The property which describe name of pizza
+        /// </remarks>
+        /// </summary>
         private PizzaName Name { get; set; }
+
+        /// <summary>
+        /// Property <c>Hunger</c>
+        /// <remarks>
+        ///     The property which describes level of hunger.
+        /// </remarks>
+        /// </summary>
         private int Hunger { get; set; }
+
+        /// <summary>
+        /// Property <c>Sharpness</c>
+        /// <remarks>
+        ///     The property which describes level of sharpness.
+        /// </remarks>
+        /// </summary>
         private int Sharpness { get; set; }
+
+        /// <summary>
+        /// Property <c>Flavor</c>
+        /// <remarks>
+        ///     The property which describes level of flavor.
+        /// </remarks>
+        /// </summary>
         private int Flavor { get; set; }
+
+        /// <summary>
+        /// Property <c>Shape</c>
+        /// <remarks>
+        ///     The property which describes shape of pizza.
+        /// </remarks>
+        /// </summary>
         private PizzaShape Shape { get; set; }
+
+        /// <summary>
+        /// Property <c>Smell</c>
+        /// <remarks>
+        ///     The property which describes level of smell.
+        /// </remarks>
+        /// </summary>
         private int Smell { get; set; }
+
+        /// <summary>
+        /// Property <c>Score</c>
+        /// <remarks>
+        ///     The property which describes number of points.
+        /// </remarks>
+        /// </summary>
         public double Score { get; set; }
 
         /// <summary>
-        /// Argument constructor for <c>Pizza</c> class
+        /// arg-constructor for <c>Pizza</c> class
+        /// <remarks>
+        ///     The arg-constructor initializes fields: name, hunger, sharpness, flavor, shape, smell.
+        ///     The constructor computes number of points for specified Pizza.
+        /// </remarks>
         /// </summary>
-        /// <param Name="name"></param>
-        /// <param Name="Hunger"></param>
-        /// <param Name="Sharpness"></param>
-        /// <param Name="Flavor"></param>
-        /// <param Name="Shape"></param>
-        /// <param Name="Smell"></param>
+        /// <param Name="name">
+        ///     The field.
+        /// </param>
+        /// <param Name="Hunger">
+        ///     The field.
+        /// </param>
+        /// <param Name="Sharpness">
+        ///     The field.
+        /// </param>
+        /// <param Name="Flavor">
+        ///     The field.
+        /// </param>
+        /// <param Name="Shape">
+        ///     The field.
+        /// </param>
+        /// <param Name="Smell">
+        ///     The field.
+        /// </param>
         public Pizza(PizzaName name, int hunger, int sharpness, int flavor, PizzaShape shape, int smell)
         {
             this.Name = name;
@@ -39,10 +106,16 @@ namespace PizzaFightArea.Model
 
         /// <summary>
         /// Method <c>ToString</c> generates view of pizza table.
-        /// Method takes parameter <c>yournick</c> type of string which is current Name of player
+        /// <remarks>
+        ///     Method takes parameter <c>yournick</c> type of string which is current Name of player
+        /// </remarks>
         /// </summary>
-        /// <param Name="yourNick"></param>
-        /// <returns></returns>
+        /// <param Name="yourNick">
+        ///     The parameter which is nick of player.
+        /// </param>
+        /// <returns>
+        ///     The returned value is string representation of Pizza view.
+        /// </returns>
         public string ToString(string yourNick)
         {
             StringBuilder builder = new StringBuilder();
@@ -100,13 +173,31 @@ namespace PizzaFightArea.Model
         }
 
         /// <summary>
-        /// Method <c>ProcessFieldsToTable</c> generate single line to 
-        /// view of pizza table for single property of pizza model
+        /// Method <c>ProcessFieldsToTable</c>
+        /// <remarks>
+        ///     The method generates single line to view of pizza table for single property of pizza model
+        /// </remarks>
         /// </summary>
-        /// <param Name="entireLength"></param>
-        /// <param Name="fieldName"></param>
-        /// <param Name="field"></param>
-        /// <param Name="builder"></param>
+        /// <param Name="entireLength">
+        ///     <remarks>
+        ///         The parameter is entire length of Pizza card.
+        ///     </remarks>
+        /// </param>
+        /// <param Name="fieldName">
+        ///     <remarks>
+        ///         The parameter is string representation of field in Pizza class.
+        ///     </remarks>
+        /// </param>
+        /// <param Name="field">
+        ///     <remarks>
+        ///         The parameter is string representation value of field in Pizza class.
+        ///     </remarks>
+        /// </param>
+        /// <param Name="builder">
+        ///     <remarks>
+        ///         The parameter is StringBuilder object.
+        ///     </remarks>
+        /// </param>
         public void ProcessFieldsToTable(int entireLength, string fieldName, string field, StringBuilder builder)
         {
             string fieldString = fieldName + ": " + field;
@@ -137,6 +228,18 @@ namespace PizzaFightArea.Model
                 .Append("\n");
         }
 
+        /// <summary>
+        /// Method <c>ComputeShapeScore</c>
+        /// <remarks>
+        ///      The method returns computed score for specified enum value of shape
+        /// </remarks>
+        /// </summary>
+        /// <param name="pizzaShape">
+        ///     <remarks>
+        ///         The parameter is shape of Pizza stored in enum class.
+        ///     </remarks>
+        /// </param>
+        /// <returns>Returns value of score</returns>
         public double ComputeShapeScore(PizzaShape pizzaShape)
         {
             int result;

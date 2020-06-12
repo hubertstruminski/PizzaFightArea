@@ -11,13 +11,18 @@ namespace PizzaFightArea.Service
     public class PizzaInitializator
     {
         /// <summary>
-        /// Field in <c>PizzaInitializator</c> class which stores <c>Pizza</c>
-        /// class data
+        /// Property <c>PizzaInitializator</c>
+        /// <remarks>
+        ///     The property stores data about pizzas.
+        /// </remarks>
         /// </summary>
         public List<Pizza> pizzas;
 
         /// <summary>
-        /// <c>PizzaInitializator</c> constructor which initialize <c>pizzas</c> field with Pizza data
+        /// No-arg constructor <c>PizzaInitializator</c>
+        /// <remarks>
+        ///     The constructor which initialize <c>pizzas</c> field with Pizza data
+        /// </remarks>
         /// </summary>
         public PizzaInitializator()
         {
