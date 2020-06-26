@@ -4,13 +4,10 @@ namespace PizzaFightArea.View
 {
     public class MainView
     {
-        /// <summary>
-        /// Method <c>ShowMainMenu</c>
         /// <remarks>
         ///     The method render view of main menu.
         ///     The menu has red background and white font color.
         /// </remarks>
-        /// </summary>
         public void ShowMainMenu()
         {
             Console.BackgroundColor = ConsoleColor.Red;
@@ -29,10 +26,7 @@ namespace PizzaFightArea.View
         }
 
         /// <summary>
-        /// Method <c>ShowOptionChooseError</c>
-        /// <remarks>
         ///     The method renders communicate that choosen option in main menu is not correct.
-        /// </remarks>
         /// </summary>
         public void ShowOptionChooseError()
         {
@@ -40,10 +34,7 @@ namespace PizzaFightArea.View
         }
 
         /// <summary>
-        /// Method <c>ShowInputNickCommand</c>
-        /// <remarks>
         ///     The method renders communicate for input nick for first player.
-        /// </remarks>
         /// </summary>
         public void ShowInputNickCommand()
         {
@@ -51,10 +42,7 @@ namespace PizzaFightArea.View
         }
 
         /// <summary>
-        /// Method <c>ShowInputNickCommandForSecondPlayer</c>
-        /// <remarks>
         ///     The method shows communicate to second player for input name.
-        /// </remarks>
         /// </summary>
         public void ShowInputNikCommandForSecondPlayer()
         {
@@ -62,10 +50,7 @@ namespace PizzaFightArea.View
         }
 
         /// <summary>
-        /// Method <c>ShowWinner</c>
-        /// <remarks>
         ///     The method shows communicate who is winner.
-        /// </remarks>
         /// </summary>
         /// <param name="name"></param>
         public void ShowWinner(string name)
@@ -74,10 +59,7 @@ namespace PizzaFightArea.View
         }
 
         /// <summary>
-        /// Method <c>ShowDeadHeat</c>
-        /// <remarks>
         ///     The method shows communicate about numbers of dead heat.
-        /// </remarks>
         /// </summary>
         public void ShowDeadHeat()
         {
@@ -85,57 +67,51 @@ namespace PizzaFightArea.View
         }
 
         /// <summary>
-        /// Method <c>ShowReadKeyForContinueGame</c>
-        /// <remarks>
         ///     The method shows communicate to player for input any key to continue game.
-        /// </remarks>
         /// </summary>
         public void ShowReadKeyForContinueGame()
         {
             Console.Write("Click any key to continue game...");
         }
 
-        /// <summary>
-        /// Method <c>ShowScores</c>
         /// <remarks>
         ///     The method shows score for players.
         ///     It's sets red background for headers with nick and white font color
         /// </remarks>
-        /// </summary>
         /// <param name="name">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameters is nick of first player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="playerWins">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is number of wins for first player
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="playerLosts">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is number of losts for first player
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="playerDeadHeats">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is number of dead heats for players
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="secondPlayerName">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameters is nick of second player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="player2Wins">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is number of wins for second player
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="player2Losts">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is number of losts for second player
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         public void ShowScores(string name, int playerWins, int playerLosts, int playerDeadHeats,
             string secondPlayerName, int player2Wins, int player2Losts)
@@ -162,10 +138,7 @@ namespace PizzaFightArea.View
         }
 
         /// <summary>
-        /// Method <c>ShowNoAvailableStatistics</c>
-        /// <remarks>
         ///     The method shows communicate that statistics are not available.
-        /// </remarks>
         /// </summary>
         public void ShowNoAvailableStatistics()
         {

@@ -7,92 +7,55 @@ using System.Linq;
 namespace PizzaFightArea.Service
 {
     /// <summary>
-    /// <c>PizzaResolver</c> class
-    /// <remarks>
     ///     The class which is responsible for management functionalities
-    /// </remarks>
     /// </summary>
     public class PizzaResolver
     {
-        /// <summary>
-        /// Property <c>MainView</c>
-        /// </summary>
         private MainView mainView;
-
-        /// <summary>
-        /// Property <c>PizzaInnitializator</c>
-        /// </summary>
         private PizzaInitializator pizzaInitializator;
 
         /// <summary>
-        /// Property <c>playerWins</c>
-        /// <remarks>
         ///     The property describes how often first player has been won.
-        /// </remarks>
         /// </summary>
         private int playerWins = 0;
 
         /// <summary>
-        /// Property <c>playerLosts</c>
-        /// <remarks>
         ///     The property describes number of losts for first player.
-        /// </remarks>
         /// </summary>
         private int playerLosts = 0;
 
         /// <summary>
-        /// Property <c>playerDeadHeats</c>
-        /// <remarks>
         ///     The property describes number of dead heats for first player.
-        /// </remarks>
         /// </summary>
         private int playerDeadHeats = 0;
 
         /// <summary>
-        /// Property <c>secondPlayerWins</c>
-        /// <remarks>
         ///     The property describes number of wins for second player
-        /// </remarks>
         /// </summary>
         private int secondPlayerWins = 0;
 
         /// <summary>
-        /// Property <c>secondPlayerLosts</c>
-        /// <remarks>
         ///     The property describes number of losts for second player.
-        /// </remarks>
         /// </summary>
         private int secondPlayerLosts = 0;
 
         /// <summary>
-        /// Property <c>isPlayerWinner</c>
-        /// <remarks>
         ///     The property is flag which indicates who is winner.
-        /// </remarks>
         /// </summary>
         private bool isPlayerWinner = false;
 
         /// <summary>
-        /// Property <c>statistics</c>
-        /// <remarks>
         ///     The property which stores data about statistics.
-        /// </remarks>
         /// </summary>
         private static List<Statistic> statistics;
 
         /// <summary>
-        /// Property <c>random</c>
-        /// <remarks>
         ///     The property for random numbers.
-        /// </remarks>
         /// </summary>
         private Random random;
 
         /// <summary>
-        /// No-arg-constructor <c>PizzaResolver</c> class
-        /// <remarks>
         ///     The constructor initialize MainView, PizzaInitializer, statistics list and Random classes
-        /// </remarks>
         /// </summary>
         public PizzaResolver()
         {
@@ -102,13 +65,10 @@ namespace PizzaFightArea.Service
             random = new Random(); 
         }
 
-        /// <summary>
-        /// Method <c>ChooseOptionInMainMenu</c>
         /// <remarks>
         ///     The method manage choose of player. 
-        ///     If <c>option</c> parameter is not 1, 2, 3 or 4 throws FormatException.
+        ///     If <c>option</c> variable is not 1, 2, 3 or 4 throws FormatException.
         /// </remarks>
-        /// </summary>
         /// <returns></returns>
         public int ChooseOptionInMainMenu()
         {
@@ -129,16 +89,9 @@ namespace PizzaFightArea.Service
         }
 
         /// <summary>
-        /// Method <c>SwitchToDestinationOption</c>
-        /// <remarks>
         ///     The method allows switch from one mode to another.
-        /// </remarks>
         /// </summary>
-        /// <param name="option">
-        ///     <remarks>
-        ///         The value returned by <c>ChooseOptionInMainMenu</c> method which is choose of player.
-        ///     </remarks>
-        /// </param>
+        /// <param name="option"></param>
         public void SwitchToDestinationOption(int option)
         {
             switch(option)
@@ -160,18 +113,11 @@ namespace PizzaFightArea.Service
             }
         }
 
-        /// <summary>
-        /// Method <c>ManageStatistics</c>
         /// <remarks>
         ///     The method sorts list and render their elements to console.
         ///     If list has zero length it's displays communicate that data is not available.
         /// </remarks>
-        /// </summary>
-        /// <param name="statistics">
-        ///     <remarks>
-        ///         The field which stores data about statistic players.
-        ///     </remarks>
-        /// </param>
+        /// <param name="statistics"></param>
         public void ManageStatistics(List<Statistic> statistics)
         {
             if(statistics.Count != 0)
@@ -190,10 +136,7 @@ namespace PizzaFightArea.Service
         }
         
         /// <summary>
-        /// Method <c>Manage1VsComputer</c>
-        /// <remarks>
         ///     The method manage 1 vs computer game mode.
-        /// </remarks>
         /// </summary>
         public void Manage1VsComputer()
         {
@@ -217,10 +160,7 @@ namespace PizzaFightArea.Service
         }
 
         /// <summary>
-        /// Method <c>Manage1Vs1</c>
-        /// <remarks>
         ///     The method manage 1 vs 1 game mode.
-        /// </remarks>
         /// </summary>
         public void Manage1Vs1()
         {
@@ -247,20 +187,17 @@ namespace PizzaFightArea.Service
         }
 
         /// <summary>
-        /// Method <c>ChooseWinner</c>
-        /// <remarks>
         ///     The method take decision who is winner.
-        /// </remarks>
         /// </summary>
         /// <param name="name">
-        ///     <remarks>
+        ///     <summary>
         ///         The name of first player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="secondNamePlayer">
-        ///     <remarks>
+        ///     <summary>
         ///         The name of second player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         public void ChooseWinner(string name, string secondNamePlayer)
         {
@@ -275,30 +212,27 @@ namespace PizzaFightArea.Service
         }
 
         /// <summary>
-        /// Method <c>ComputeAndAssignScore</c>
-        /// <remarks>
         ///     The method computes and assigns scores to specified player.
-        /// </remarks>
         /// </summary>
         /// <param name="myPizza">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter <c>myPizza</c> is randomly returned object of Pizza class which is assigned to first player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="computerPizza">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter <c>computerPizza</c> is randomly returned object of Pizza class which is assigned to second player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="myStatistics">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is statistic object which is assigned to first player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="computerStatistics">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is statistic object which is assigned to second player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         public void ComputeAndAssignScore(Pizza myPizza, Pizza computerPizza,
                                             Statistic myStatistics, Statistic computerStatistics)
@@ -325,30 +259,27 @@ namespace PizzaFightArea.Service
         }
 
         /// <summary>
-        /// Method <c>ManageGameQueue</c>
-        /// <remarks>
         ///     The method randomly returns two Pizza object, render them and manage scores for players.
-        /// </remarks>
         /// </summary>
         /// <param name="name">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is name for first player.
-        ///     </remarks>    
+        ///     </summary>    
         /// </param>
         /// <param name="myStatistics">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is statistic object which is assigned to first player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="computerStatistics">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is statistic object which is assigned to second player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         /// <param name="secondNamePlayer">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is name for second player.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         public void ManageGameQueue(string name, Statistic myStatistics, Statistic computerStatistics, string secondNamePlayer)
         {
@@ -371,15 +302,12 @@ namespace PizzaFightArea.Service
         }
 
         /// <summary>
-        /// Method <c>CheckThatPlayerExistInStatistics</c>
-        /// <remarks>
         ///     The method checks that player already exist in statistics list.
-        /// </remarks>
         /// </summary>
         /// <param name="statistic">
-        ///     <remarks>
+        ///     <summary>
         ///         The parameter is field list for storing statistics data.
-        ///     </remarks>
+        ///     </summary>
         /// </param>
         public void CheckThatPlayerExistInStatistics(Statistic statistic)
         {
@@ -396,10 +324,7 @@ namespace PizzaFightArea.Service
         } 
 
         /// <summary>
-        /// Method <c>RestartScores</c>
-        /// <remarks>
         ///     The method resets values for score variables.
-        /// </remarks>
         /// </summary>
         public void RestartScores()
         {

@@ -5,10 +5,7 @@ using System.Text;
 namespace PizzaFightArea.Enum
 {
     /// <summary>
-    /// Enum class <c>PizzaName</c> 
-    /// <remarks>
-    ///     The enum class defines property value of <c>Name</c> for Pizza class.
-    /// </remarks>
+    /// The enum class defines property value of <c>Name</c> for Pizza class.
     /// </summary>
     public enum PizzaName
     {

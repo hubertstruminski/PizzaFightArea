@@ -6,23 +6,17 @@ using System.Collections.Generic;
 namespace PizzaFightArea.Service
 {
     /// <summary>
-    /// <c>PizzaInitializator</c> class which stores <c>pizzas</c> field
+    ///     <c>PizzaInitializator</c> class which stores <c>pizzas</c> field
     /// </summary>
     public class PizzaInitializator
     {
         /// <summary>
-        /// Property <c>PizzaInitializator</c>
-        /// <remarks>
         ///     The property stores data about pizzas.
-        /// </remarks>
         /// </summary>
         public List<Pizza> pizzas;
 
         /// <summary>
-        /// No-arg constructor <c>PizzaInitializator</c>
-        /// <remarks>
         ///     The constructor which initialize <c>pizzas</c> field with Pizza data
-        /// </remarks>
         /// </summary>
         public PizzaInitializator()
         {
